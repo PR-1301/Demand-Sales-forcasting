@@ -98,3 +98,12 @@ results_df = pd.DataFrame(results).sort_values('rmse')
 print("\n=== Final Comparison (sorted by RMSE, lower is better) ===")
 print(results_df.to_string(index=False))
 results_df.to_csv('outputs/model_comparison.csv', index=False)
+
+# %% ---------------------------------------------------------
+# 10. Save the trained model + feature columns for the frontend
+# ---------------------------------------------------------
+import joblib
+
+joblib.dump(xgb, 'outputs/xgb_model.pkl')
+joblib.dump(feature_cols, 'outputs/feature_cols.pkl')
+print("Model saved to outputs/xgb_model.pkl")
