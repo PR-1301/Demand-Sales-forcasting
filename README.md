@@ -156,6 +156,9 @@ The model with the lowest prediction error and highest explanatory power will be
 
 ## Tech Stack
 
+## UI
+- Streamlit
+
 ### Programming Language
 
 - Python 3.x
